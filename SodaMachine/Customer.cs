@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SodaMachine
 {
-    class Consumer
+    class Customer
     {
+        public Wallet wallet;
+        public Backpack backpack;
     }
 }
