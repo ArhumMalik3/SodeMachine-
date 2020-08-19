@@ -8,8 +8,22 @@ namespace SodaMachine
 {
     abstract class Can
     {
+        //member variable
         protected double cost;
-        public double Cost;
+
+        //properties
+        public double Cost
+        {
+            get
+            {
+                return cost;
+            }
+
+            set
+            {
+                cost = value;
+            }
+        }
         public string name;
     }
 }
