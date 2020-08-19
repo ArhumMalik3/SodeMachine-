@@ -55,6 +55,7 @@ namespace SodaMachine
 
         }
 
+        //Soda machine starts with 20 of each kind of soda
 
         public void StartingCans()
         {
