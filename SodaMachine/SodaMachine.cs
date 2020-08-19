@@ -8,7 +8,24 @@ namespace SodaMachine
 {
     class SodaMachine
     {
+        //member variables
         public List<Coin> register;
         public List<Can> inventory;
+
+
+        //constructor
+        public SodaMachine()
+        {
+            register = new List<Coin>();
+        }
+
+
+
+        //member methods
+        public void StartingCoins()
+        {
+            register.Add(Quarter quarter);
+        }
+
     }
 }
