@@ -61,6 +61,12 @@ namespace SodaMachine
 
         }
 
+        public void AcceptPayment()
+        {
+            sodaMachine.register = sodaMachine.register.Concat(customer.selectedCoins).ToList();
+            customer.selectedCoins.Clear();
+        }
+
         public void CustomerTotal()
         {
 
