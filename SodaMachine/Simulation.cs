@@ -39,6 +39,28 @@ namespace SodaMachine
             customer.SodaChoice(Userinterface.userChoice);
         }
 
+
+        public void CheckPayment()
+        {
+
+            if (customer.totalBill > customer.customerTotal)
+            {
+                //return money back
+            }
+            else if (customer.totalBill == customer.customerTotal)
+            {
+                //accept payment
+                //dispense a soda instance that gets saved in my backpack
+            }
+            else
+            {
+                //accept payment
+                //return change as a list of coins from internal
+                //dispense a soda instance that gets saved in my backpack
+            }
+
+        }
+
         public void CustomerTotal()
         {
 
