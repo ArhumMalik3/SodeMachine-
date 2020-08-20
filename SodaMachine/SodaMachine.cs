@@ -20,6 +20,7 @@ namespace SodaMachine
         public SodaMachine()
         {
             register = new List<Coin>();
+            inventory = new List<Can>();
         }
 
 
@@ -29,27 +30,22 @@ namespace SodaMachine
         {
             for (int i = 0; i < 20; i++)
             {
-                Quarter quarter = new Quarter();
-                register.Add(quarter);
-                
+                AddQuarterToSodaMachine();
             }
 
             for (int i = 0; i < 10; i++)
             {
-                Dime dime = new Dime();
-                register.Add(dime);
+                AddDimeToSodaMachine();
             }
 
             for (int i = 0; i < 20; i++)
             {
-                Nickel nickel = new Nickel();
-                register.Add(nickel);
+                AddNickelToSodaMachine();
             }
 
             for (int i = 0; i < 50; i++)
             {
-                Penny penny = new Penny();
-                register.Add(penny);
+                AddPennytoSodaMachine();
             }
                 
 
@@ -68,6 +64,30 @@ namespace SodaMachine
                 inventory.Add(orangeSoda);
                 inventory.Add(rootBeer);
             }
+        }
+
+        public void AddQuarterToSodaMachine()
+        {
+            Quarter quarter = new Quarter();
+            register.Add(quarter);
+        }
+
+        public void AddDimeToSodaMachine()
+        {
+            Dime dime = new Dime();
+            register.Add(dime);
+        }
+
+        public void AddNickelToSodaMachine()
+        {
+            Nickel nickel = new Nickel();
+            register.Add(nickel);
+        }
+
+        public void AddPennytoSodaMachine()
+        {
+            Penny penny = new Penny();
+            register.Add(penny);
         }
     }
 }

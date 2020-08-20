@@ -13,12 +13,13 @@ namespace SodaMachine
         //member variables
         public SodaMachine sodaMachine;
         public Customer customer;
+        
 
 
         //constructor
         public Simulation()
         {
-
+            
         }
 
 
@@ -35,30 +36,20 @@ namespace SodaMachine
             //User picks the soda he wants
             //user picks what coins he wants to pay with
             //
+            customer.SodaChoice(Userinterface.userChoice);
+        }
+
+        public void CustomerTotal()
+        {
 
         }
 
-        public void CheckingUserInput()
+        
+
+        public void CheckingUserSodaSelection()
         {
-          while (Userinterface.userCoins != "F")
-            {
-                if (Userinterface.userCoins == "Q")
-                {
 
-                }
-                else if (Userinterface.userCoins == "D")
-                {
 
-                }
-                else if (Userinterface.userCoins == "N")
-                {
-
-                }
-                else
-                {
-
-                }
-            }  
         }
 
         public void SimulationSetup()
@@ -68,6 +59,7 @@ namespace SodaMachine
             customer.wallet.StartingWallet();
         }
 
+         
 
 
 

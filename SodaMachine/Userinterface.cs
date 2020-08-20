@@ -31,13 +31,15 @@ namespace SodaMachine
                 "Cola: $.35\n" +
                 "Orange Soda: $.06");
             Console.WriteLine(" ");
+            Console.WriteLine("Type R for RootBeer, C for Cola, or O for Orange soda.");
+            Console.WriteLine(" ");
         }
 
         public static void ChooseSoda()
         {
             Console.WriteLine("What Soda would you like? ");
             userChoice = Console.ReadLine();
-
+            //make sure choice matches one of the available options
         }
 
         public static void DisplaySelectigCoins()

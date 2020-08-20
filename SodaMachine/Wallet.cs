@@ -29,30 +29,54 @@ namespace SodaMachine
         {
             for (int i = 0; i < 11; i++)
             {
-                Quarter quarter = new Quarter();
-                coins.Add(quarter);
+                AddQuarterToWallet();
 
             }
 
             for (int i = 0; i < 10; i++)
             {
-                Dime dime = new Dime();
-                coins.Add(dime);
+                AddDimeToWallet();
             }
 
             for (int i = 0; i < 20; i++)
             {
-                Nickel nickel = new Nickel();
-                coins.Add(nickel);
+                AddNickelToWallet();
             }
 
             for (int i = 0; i < 25; i++)
             {
-                Penny penny = new Penny();
-                coins.Add(penny);
+                AddPennytoWallet();
             }
 
         }
 
+        public void AddQuarterToWallet()
+        {
+            Quarter quarter = new Quarter();
+            coins.Add(quarter);
+        }
+
+        public void AddDimeToWallet()
+        {
+            Dime dime = new Dime();
+            coins.Add(dime);
+        }
+
+        public void AddNickelToWallet()
+        {
+            Nickel nickel = new Nickel();
+            coins.Add(nickel);
+        }
+
+        public void AddPennytoWallet()
+        {
+            Penny penny = new Penny();
+            coins.Add(penny);
+        }
+
+        public void RemoveQuarterFromWallet()
+        {
+            
+        }
     }
 }
