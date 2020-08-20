@@ -40,7 +40,25 @@ namespace SodaMachine
 
         public void CheckingUserInput()
         {
-            
+          while (Userinterface.userCoins != "F")
+            {
+                if (Userinterface.userCoins == "Q")
+                {
+
+                }
+                else if (Userinterface.userCoins == "D")
+                {
+
+                }
+                else if (Userinterface.userCoins == "N")
+                {
+
+                }
+                else
+                {
+
+                }
+            }  
         }
 
         public void SimulationSetup()
