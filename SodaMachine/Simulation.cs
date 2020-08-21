@@ -61,24 +61,31 @@ namespace SodaMachine
 
         }
 
+        public void TransactionDenied()
+        {
+            customer.selectedCoins.Clear();
+            customer.selectedCans.Clear();
+        }
+
         public void AcceptPayment()
+        {
+            //remove coins from the wallet
+            MoveSelectedCoinsToRegister();
+        }
+
+        public void DispenseSoda()
+        {
+            customer.backpack.cans = customer.backpack.cans.Concat(customer.selectedCans).ToList();
+            customer.selectedCans.Clear();
+        }
+
+        public void MoveSelectedCoinsToRegister()
         {
             sodaMachine.register = sodaMachine.register.Concat(customer.selectedCoins).ToList();
             customer.selectedCoins.Clear();
         }
 
-        public void CustomerTotal()
-        {
-
-        }
-
-        
-
-        public void CheckingUserSodaSelection()
-        {
-
-
-        }
+       
 
         public void SimulationSetup()
         {

@@ -55,12 +55,20 @@ namespace SodaMachine
             }
         }
 
+        public void RemoveCoinsFromWallet()
+        {
+            wallet.coins.RemoveAt(0);
+            wallet.coins.RemoveAt(11);
+            wallet.coins.RemoveAt(21);
+            wallet.coins.RemoveAt(41);
+        }
+
         public void SodaChoice(string sodaChoice)
         {
             switch (sodaChoice)
             {
                 case "R":
-                    AddRootBeertoSelectedCans();
+                    AddRootBeerToSelectedCans();
                     
                     break;
 
@@ -103,7 +111,7 @@ namespace SodaMachine
             selectedCoins.Add(penny);
         }
         //cans
-        public void AddRootBeertoSelectedCans()
+        public void AddRootBeerToSelectedCans()
         {
             RootBeer rootbeer = new RootBeer();
             selectedCans.Add(rootbeer);
