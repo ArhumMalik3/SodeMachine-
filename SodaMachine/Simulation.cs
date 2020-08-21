@@ -32,11 +32,15 @@ namespace SodaMachine
             //stock cans in the soda machine
             //stock coins into the wallet
             //Display welcome to the user
-            //Give the user the soda options
-            //User picks the soda he wants
-            //user picks what coins he wants to pay with
-            //
+            Userinterface.DisplayWelcome();
+            Userinterface.DisplaySodaOptions();
+            Userinterface.ChooseSoda();
+            Userinterface.DisplaySelectigCoins();
+            Userinterface.SelectCoins();
+            
             customer.SodaChoice(Userinterface.userChoice);
+            customer.SelectedUserCoins();
+            CheckPayment();
         }
 
 
@@ -46,17 +50,22 @@ namespace SodaMachine
             if (customer.totalBill > customer.customerTotal)
             {
                 //return money back
+                TransactionDenied();
             }
             else if (customer.totalBill == customer.customerTotal)
             {
                 //accept payment
+                AcceptPayment();
                 //dispense a soda instance that gets saved in my backpack
+                DispenseSoda();
             }
             else
             {
                 //accept payment
+                AcceptPayment();
                 //return change as a list of coins from internal
                 //dispense a soda instance that gets saved in my backpack
+                DispenseSoda();
             }
 
         }
